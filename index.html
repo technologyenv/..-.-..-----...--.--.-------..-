@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For You 🧸❤️</title>
+    <!-- استدعاء خط راقي ومميز من جوجل فونتس -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
@@ -16,8 +21,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #ffe5ec, #ffc2d1);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, #fff0f3, #ffccd5);
             overflow: hidden;
             position: relative;
         }
@@ -37,176 +41,91 @@
             position: absolute;
             background-color: #ffb3c6;
             display: inline-block;
-            height: 20px;
+            height: 16px;
             margin: 0 10px;
             transform: rotate(-45deg);
-            width: 20px;
+            width: 16px;
             bottom: -50px;
             border-radius: 50% 50% 0 0;
-            animation: floatUp 8s linear infinite;
+            animation: floatUp 7s linear infinite;
+            opacity: 0.6;
         }
 
         .heart:before {
             content: "";
             background-color: #ffb3c6;
             border-radius: 50%;
-            height: 20px;
+            height: 16px;
             position: absolute;
-            width: 20px;
-            top: -10px;
+            width: 16px;
+            top: -8px;
             left: 0;
         }
 
         @keyframes floatUp {
-            0% {
-                transform: translateY(0) rotate(-45deg);
-                opacity: 0;
-            }
-            10% {
-                opacity: 0.8;
-            }
-            90% {
-                opacity: 0.8;
-            }
-            100% {
-                transform: translateY(-110vh) rotate(-45deg);
-                opacity: 0;
-            }
+            0% { transform: translateY(0) rotate(-45deg); opacity: 0; }
+            100% { transform: translateY(-110vh) rotate(-45deg); opacity: 0; }
         }
 
-        /* كارت الدبدوب */
+        /* كارت العرض النظيف والمودرن */
         .card {
-            background: rgba(255, 255, 255, 0.75);
-            backdrop-filter: blur(10px);
-            padding: 40px 30px;
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            padding: 35px;
             border-radius: 30px;
-            box-shadow: 0 15px 35px rgba(255, 182, 198, 0.4);
+            box-shadow: 0 20px 40px rgba(255, 77, 109, 0.15);
             text-align: center;
             z-index: 2;
-            max-width: 380px;
+            max-width: 400px;
             width: 90%;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            animation: popIn 1.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        /* الدبدوب مرسوم بالـ CSS بالكامل عشان يشتغل فوراً وبدون روابط صور خارجية */
-        .teddy {
-            width: 160px;
-            height: 160px;
-            margin: 0 auto 30px;
+        /* حاوية الدبدوب الـ 3D */
+        .teddy-container {
+            width: 100%;
+            margin-bottom: 25px;
             position: relative;
+            display: flex;
+            justify-content: center;
+            animation: gentleFloat 4s ease-in-out infinite;
         }
 
-        .ear-l, .ear-r {
-            width: 45px;
-            height: 45px;
-            background: #b5835a;
-            border-radius: 50%;
-            position: absolute;
-            top: 5px;
-        }
-        .ear-l { left: 15px; }
-        .ear-r { right: 15px; }
-
-        .ear-l::after, .ear-r::after {
-            content: '';
-            width: 25px;
-            height: 25px;
-            background: #ffb3c6;
-            border-radius: 50%;
-            position: absolute;
-            top: 10px;
-            left: 10px;
+        .teddy-img {
+            max-width: 220px;
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            /* تأثير ظل خفيف تحت الدبدوب عشان يبان ثري دي وواقعي وسط الخلفية */
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
         }
 
-        .head {
-            width: 130px;
-            height: 115px;
-            background: #cb997e;
-            border-radius: 50% 50% 45% 45%;
-            position: absolute;
-            bottom: 10px;
-            left: 15px;
-            box-shadow: inset -5px -5px 0px rgba(0,0,0,0.05);
-        }
-
-        .eye-l, .eye-r {
-            width: 12px;
-            height: 12px;
-            background: #2f3e46;
-            border-radius: 50%;
-            position: absolute;
-            top: 45px;
-        }
-        .eye-l { left: 35px; }
-        .eye-r { right: 35px; }
-
-        .snout {
-            width: 45px;
-            height: 35px;
-            background: #fff;
-            border-radius: 50%;
-            position: absolute;
-            bottom: 20px;
-            left: 42.5px;
-        }
-
-        .nose {
-            width: 16px;
-            height: 10px;
-            background: #2f3e46;
-            border-radius: 50% 50% 45% 45%;
-            position: absolute;
-            top: 8px;
-            left: 14.5px;
-        }
-
-        .mouth {
-            width: 14px;
-            height: 8px;
-            border: 2px solid #2f3e46;
-            border-top: none;
-            border-radius: 0 0 10px 10px;
-            position: absolute;
-            bottom: 8px;
-            left: 15.5px;
-        }
-
-        .blush-l, .blush-r {
-            width: 18px;
-            height: 10px;
-            background: rgba(255, 143, 163, 0.6);
-            border-radius: 50%;
-            position: absolute;
-            top: 58px;
-        }
-        .blush-l { left: 22px; }
-        .blush-r { right: 22px; }
-
-        /* نص الرسالة */
+        /* نص الرسالة بالخط الراقي الجديد */
         .message {
-            font-size: 2rem;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.2rem;
             color: #ff4d6d;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
-            animation: pulse 1.5s infinite ease-in-out;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+            animation: smoothPulse 2s infinite ease-in-out;
         }
 
-        .sub-message {
-            font-size: 1.2rem;
-            color: #c9184a;
-        }
-
-        /* حركات الأنيميشن */
+        /* حركات الأنيميشن الناعمة */
         @keyframes popIn {
-            0% { transform: scale(0.6); opacity: 0; }
+            0% { transform: scale(0.8); opacity: 0; }
             100% { transform: scale(1); opacity: 1; }
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        @keyframes gentleFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes smoothPulse {
+            0%, 100% { transform: scale(1); opacity: 0.95; }
+            50% { transform: scale(1.03); opacity: 1; }
         }
     </style>
 </head>
@@ -217,40 +136,27 @@
 
     <!-- كارت الدبدوب والرسالة -->
     <div class="card">
-        <div class="teddy">
-            <div class="ear-l"></div>
-            <div class="ear-r"></div>
-            <div class="head">
-                <div class="eye-l"></div>
-                <div class="eye-r"></div>
-                <div class="blush-l"></div>
-                <div class="blush-r"></div>
-                <div class="snout">
-                    <div class="nose"></div>
-                    <div class="mouth"></div>
-                </div>
-            </div>
+        <div class="teddy-container">
+            <!-- صورة الدبدوب الـ 3D الكيوت اللي ماسك قلب وتعبير وشه لطيف -->
+            <img src="watermarked_img_8986450022820801147.png" alt="Cute 3D Teddy Bear" class="teddy-img">
         </div>
         
         <div class="message">I love you</div>
-        <div class="sub-message">🧸🌹</div>
     </div>
 
     <script>
-        // كود جافا سكريبت بسيط عشان يولد قلوب بشكل عشوائي في الخلفية
+        // توليد قلوب الخلفية بشكل عشوائي وناعم
         const container = document.getElementById('heartsContainer');
-        const totalHearts = 25;
+        const totalHearts = 20;
 
         for (let i = 0; i < totalHearts; i++) {
             const heart = document.createElement('div');
             heart.classList.add('heart');
             
-            // توزيع عشوائي للقلوب على الشاشة وتوقيت حركتها
             heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDelay = Math.random() * 8 + 's';
+            heart.style.animationDelay = Math.random() * 7 + 's';
             
-            // أحجام عشوائية خفيفة للقلوب
-            const size = (Math.random() * 15) + 10;
+            const size = (Math.random() * 12) + 8;
             heart.style.width = size + 'px';
             heart.style.height = size + 'px';
             
