@@ -4,7 +4,6 @@
     <meta charset="UTF-8">  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>For You 🧸❤️</title>  
-    <!-- استدعاء خط راقي وثقيل -->  
     <link rel="preconnect" href="https://fonts.googleapis.com">  
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">  
@@ -26,7 +25,7 @@
         font-family: 'Great Vibes', cursive;  
     }  
 
-    /* قلوب الخلفية */  
+    /* القلوب - سرعة مضاعفة */
     .hearts-bg {  
         position: absolute;  
         width: 100%;  
@@ -46,7 +45,7 @@
         transform: rotate(-45deg);  
         bottom: -50px;  
         border-radius: 50% 50% 0 0;  
-        animation: floatUp 5s linear infinite;  
+        animation: floatUp 2.5s linear infinite;  
         opacity: 0.8;  
         box-shadow: 0 0 20px rgba(255, 107, 107, 0.7);  
     }  
@@ -60,28 +59,15 @@
         width: 25px;  
     }  
 
-    .heart:before {  
-        top: -12px;  
-        left: 0;  
-    }  
-
-    .heart:after {  
-        left: 12px;  
-        top: 0;  
-    }  
+    .heart:before { top: -12px; left: 0; }  
+    .heart:after { left: 12px; top: 0; }  
 
     @keyframes floatUp {  
-        0% { 
-            transform: translateY(0) rotate(-45deg) scale(0.8);
-            opacity: 0; 
-        }  
-        100% { 
-            transform: translateY(-110vh) rotate(-45deg) scale(1.3);
-            opacity: 0; 
-        }  
+        0% { transform: translateY(0) rotate(-45deg) scale(0.8); opacity: 0; }  
+        100% { transform: translateY(-110vh) rotate(-45deg) scale(1.3); opacity: 0; }  
     }  
 
-    /* نجوم متلألئة */
+    /* النجوم - أسرع */
     .stars {
         position: absolute;
         width: 100%;
@@ -96,7 +82,7 @@
         height: 4px;
         background: #fff;
         border-radius: 50%;
-        animation: twinkle 2s ease-in-out infinite;
+        animation: twinkle 0.8s ease-in-out infinite;
         box-shadow: 0 0 10px #fff, 0 0 20px #ffd700;
     }
 
@@ -105,7 +91,7 @@
         50% { opacity: 1; transform: scale(1.3); }
     }
 
-    /* الفراشات */
+    /* الفراشات - أسرع بكتير */
     .butterflies {
         position: absolute;
         width: 100%;
@@ -117,24 +103,18 @@
     .butterfly {
         position: absolute;
         font-size: 24px;
-        animation: butterflyFly 8s linear infinite;
+        animation: butterflyFly 3s linear infinite;
         opacity: 0.7;
     }
 
     @keyframes butterflyFly {
-        0% { 
-            transform: translateX(-100vw) translateY(0) rotate(0deg);
-            opacity: 0;
-        }
+        0% { transform: translateX(-100vw) translateY(0) rotate(0deg); opacity: 0; }
         10% { opacity: 0.7; }
         90% { opacity: 0.7; }
-        100% { 
-            transform: translateX(100vw) translateY(-100px) rotate(360deg);
-            opacity: 0;
-        }
+        100% { transform: translateX(100vw) translateY(-100px) rotate(360deg); opacity: 0; }
     }
 
-    /* الكارت الرئيسي */  
+    /* الكارت */
     .card {  
         background: rgba(255, 255, 255, 0.2);  
         backdrop-filter: blur(25px);  
@@ -148,10 +128,10 @@
         max-width: 450px;  
         width: 90%;  
         border: 2px solid rgba(255, 255, 255, 0.4);  
-        animation: cardPopIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);  
+        animation: cardPopIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);  
     }  
 
-    /* الدبدوب ثلاثي الأبعاد */  
+    /* الدبدوب - أسرع 3 أضعاف */
     .teddy-container {  
         width: 100%;  
         margin-bottom: 35px;  
@@ -166,7 +146,7 @@
         height: 240px;  
         position: relative;  
         transform-style: preserve-3d;  
-        animation: teddyRotate 4s ease-in-out infinite;  
+        animation: teddyRotate 1.2s ease-in-out infinite;  
     }
 
     .teddy-face {  
@@ -194,17 +174,8 @@
                     0 5px 15px rgba(0,0,0,0.3);
     }
 
-    .ear-left {
-        top: -25px;
-        left: 15px;
-        transform: translateZ(40px);
-    }
-
-    .ear-right {
-        top: -25px;
-        right: 15px;
-        transform: translateZ(40px);
-    }
+    .ear-left { top: -25px; left: 15px; transform: translateZ(40px); }
+    .ear-right { top: -25px; right: 15px; transform: translateZ(40px); }
 
     .teddy-eye {
         position: absolute;
@@ -217,13 +188,8 @@
                     0 0 10px rgba(255, 255, 255, 0.5);
     }
 
-    .eye-left {
-        left: 55px;
-    }
-
-    .eye-right {
-        right: 55px;
-    }
+    .eye-left { left: 55px; }
+    .eye-right { right: 55px; }
 
     .teddy-nose {
         position: absolute;
@@ -255,7 +221,7 @@
         transform: translateX(-50%) rotate(-45deg);
         box-shadow: 0 0 30px rgba(255, 107, 107, 0.8),
                     0 0 50px rgba(255, 107, 107, 0.5);
-        animation: heartBeat 0.8s ease-in-out infinite;
+        animation: heartBeat 0.4s ease-in-out infinite;
     }
 
     .teddy-heart:before, .teddy-heart:after {
@@ -267,17 +233,10 @@
         border-radius: 50%;
     }
 
-    .teddy-heart:before {
-        top: -30px;
-        left: 0;
-    }
+    .teddy-heart:before { top: -30px; left: 0; }
+    .teddy-heart:after { left: 30px; top: 0; }
 
-    .teddy-heart:after {
-        left: 30px;
-        top: 0;
-    }
-
-    /* النص المتوهج الثقيل */  
+    /* النص */
     .message {  
         font-size: 4.5rem;  
         font-weight: 700;
@@ -290,10 +249,9 @@
                      0 0 100px #ff6b6b;
         margin-bottom: 15px;  
         letter-spacing: 3px;  
-        animation: textGlow 2s ease-in-out infinite alternate;  
+        animation: textGlow 1s ease-in-out infinite alternate;  
     }  
 
-    /* الأنيميشن */  
     @keyframes cardPopIn {  
         0% { transform: scale(0.6); opacity: 0; }  
         100% { transform: scale(1); opacity: 1; }  
@@ -311,23 +269,13 @@
 
     @keyframes textGlow {  
         0%, 100% { 
-            text-shadow: 0 0 15px #fff,
-                         0 0 30px #fff,
-                         0 0 45px #ff6b6b,
-                         0 0 60px #ff6b6b,
-                         0 0 80px #ff6b6b;
+            text-shadow: 0 0 15px #fff, 0 0 30px #fff, 0 0 45px #ff6b6b, 0 0 60px #ff6b6b, 0 0 80px #ff6b6b;
         }  
         50% { 
-            text-shadow: 0 0 25px #fff,
-                         0 0 50px #fff,
-                         0 0 75px #ff6b6b,
-                         0 0 100px #ff6b6b,
-                         0 0 125px #ff6b6b,
-                         0 0 150px #ff6b6b;
+            text-shadow: 0 0 25px #fff, 0 0 50px #fff, 0 0 75px #ff6b6b, 0 0 100px #ff6b6b, 0 0 125px #ff6b6b, 0 0 150px #ff6b6b;
         }  
     }  
 
-    /* زر تشغيل الموسيقى */
     .music-btn {
         position: fixed;
         bottom: 30px;
@@ -342,18 +290,12 @@
         cursor: pointer;
         z-index: 10;
         box-shadow: 0 0 30px rgba(255, 107, 107, 0.6);
-        animation: pulse 2s ease-in-out infinite;
+        animation: pulse 1s ease-in-out infinite;
         border: 3px solid rgba(255, 255, 255, 0.5);
     }
 
-    .music-btn:hover {
-        transform: scale(1.1);
-    }
-
-    .music-icon {
-        font-size: 30px;
-        color: #fff;
-    }
+    .music-btn:hover { transform: scale(1.1); }
+    .music-icon { font-size: 30px; color: #fff; }
 
     @keyframes pulse {
         0%, 100% { transform: scale(1); box-shadow: 0 0 30px rgba(255, 107, 107, 0.6); }
@@ -366,7 +308,6 @@
     <div class="stars" id="starsContainer"></div>
     <div class="butterflies" id="butterfliesContainer"></div>
 
-    <!-- مشغل الموسيقى -->
     <audio id="musicPlayer" loop>
         <source src="hussein_aljassmi_heart_ayel.mp3" type="audio/mpeg">
         <source src="hussein_aljassmi_heart_ayel.ogg" type="audio/ogg">
@@ -394,7 +335,6 @@
     </div>  
 
     <script>  
-        // القلوب
         const container = document.getElementById('heartsContainer');  
         const totalHearts = 30;  
 
@@ -402,17 +342,14 @@
             const heart = document.createElement('div');  
             heart.classList.add('heart');  
             heart.style.left = Math.random() * 100 + 'vw';  
-            heart.style.animationDelay = Math.random() * 3 + 's';  
-            heart.style.animationDuration = (Math.random() * 2 + 4) + 's';
-              
+            heart.style.animationDelay = Math.random() * 2 + 's';  
+            heart.style.animationDuration = (Math.random() * 1 + 2) + 's';
             const size = (Math.random() * 18) + 12;  
             heart.style.width = size + 'px';  
             heart.style.height = size + 'px';  
-              
             container.appendChild(heart);  
         }  
 
-        // النجوم
         const starsContainer = document.getElementById('starsContainer');
         const totalStars = 50;
 
@@ -421,28 +358,25 @@
             star.classList.add('star');
             star.style.left = Math.random() * 100 + 'vw';
             star.style.top = Math.random() * 100 + 'vh';
-            star.style.animationDelay = Math.random() * 2 + 's';
-            star.style.animationDuration = (Math.random() * 1 + 1.5) + 's';
+            star.style.animationDelay = Math.random() * 1 + 's';
             starsContainer.appendChild(star);
         }
 
-        // الفراشات
         const butterfliesContainer = document.getElementById('butterfliesContainer');
         const butterflies = ['🦋', '💕', '✨', '💖'];
-        const totalButterflies = 8;
+        const totalButterflies = 12;
 
         for (let i = 0; i < totalButterflies; i++) {
             const butterfly = document.createElement('div');
             butterfly.classList.add('butterfly');
             butterfly.textContent = butterflies[Math.floor(Math.random() * butterflies.length)];
             butterfly.style.top = (Math.random() * 80 + 10) + 'vh';
-            butterfly.style.animationDelay = (Math.random() * 8) + 's';
-            butterfly.style.animationDuration = (Math.random() * 4 + 8) + 's';
+            butterfly.style.animationDelay = (Math.random() * 3) + 's';
+            butterfly.style.animationDuration = (Math.random() * 2 + 3) + 's';
             butterfly.style.fontSize = (Math.random() * 12 + 20) + 'px';
             butterfliesContainer.appendChild(butterfly);
         }
 
-        // تشغيل الموسيقى
         let isPlaying = false;
         const musicPlayer = document.getElementById('musicPlayer');
         const musicIcon = document.getElementById('musicIcon');
@@ -458,15 +392,12 @@
             isPlaying = !isPlaying;
         }
 
-        // تشغيل تلقائي عند التفاعل الأول
         document.addEventListener('click', function() {
             if (!isPlaying) {
                 musicPlayer.play().then(() => {
                     isPlaying = true;
                     musicIcon.textContent = '🔇';
-                }).catch(e => {
-                    console.log('Auto-play prevented');
-                });
+                }).catch(e => console.log('Auto-play prevented'));
             }
         }, { once: true });
     </script>
